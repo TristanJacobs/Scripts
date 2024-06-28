@@ -1,8 +1,8 @@
 Write-Host "Tot Welke groep moeten de personen toegevoegd worden?" -ForegroundColor Green
 $group = Read-host "Groepsnaam"  #groep waaraan de personen worden toegevoegd.
-$csv = '.\Active Directory\export.csv'
+$path = "" #kan gewoon bestandsnaam zijn, maar best een pad.
 
-$users = Import-Csv -Path $csv
+$users = Import-Csv -Path $path
 
 foreach ($user in $users){
     try{
